@@ -52,7 +52,7 @@ font-6 = "WenQuanYi Micro Hei Mono,文泉驛等寬微米黑,文泉驿等宽微�
 
 modules-left = i3
 modules-center = mpd
-modules-right = filesystem xbacklight volume xkeyboard memory cpu wlan eth battery temperature date powermenu
+modules-right = filesystem xbacklight volume xkeyboard memory cpu wlan eth battery temperature date
 tray-position = right
 tray-padding = 2
 ;tray-transparent = true
