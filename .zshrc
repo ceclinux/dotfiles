@@ -2,7 +2,7 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH=/home/ceclinux/.oh-my-zsh
+export ZSH=$HOME/.oh-my-zsh
 # Load rbenv automatically by appending
 # the following to ~/.zshrc:
 
