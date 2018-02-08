@@ -200,7 +200,7 @@ card = intel_backlight
 [module/cpu]
 type = internal/cpu
 label = %percentage-cores%
-format = <label> <ramp-coreload>
+format = <ramp-coreload>
 ramp-coreload-0 = ▁
 ramp-coreload-1 = ▂
 ramp-coreload-2 = ▃
