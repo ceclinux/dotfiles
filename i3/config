@@ -32,7 +32,8 @@ exec firefox
 exec mpd
 font pango:Droid Sans Mono 12
 
-
+set $mod4 Mod4
+bindsym $mod4+e exec nautilus
 set $mod Mod1
 
 
