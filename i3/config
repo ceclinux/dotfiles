@@ -27,9 +27,6 @@ set_from_resource	  $background_i3wmthemer	background
 # i3 config file (v4)
 #
 # Please see http://i3wm.org/docs/userguide.html for a complete reference!
-exec fcitx
-exec firefox
-exec mpd
 font pango:Droid Sans Mono 12
 
 set $mod4 Mod4
@@ -204,6 +201,11 @@ bindsym XF86AudioPrev exec playerctl previous
 # }
 assign [class = "Firefox"] 3
 assign [class = "terminal"] 1
-exec xrandr --output HDMI2 --off --output HDMI1 --mode 2560x1440 --pos 1920x0 --rotate left --output DP1 --off --output eDP1 --primary --mode 1920x1080 --pos 0x1480 --rotate normal --output VIRTUAL1 --off
+assign [class = "stardict"] 7
+exec_always --no-startup-id $HOME/.screenlayout/screen_layout3.sh
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
+exec fcitx
+exec firefox
+exec mpd
 exec nutstore
+exec_always $HOME/.fehbg
