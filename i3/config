@@ -31,6 +31,7 @@ font pango:Droid Sans Mono 12
 
 set $mod4 Mod4
 bindsym $mod4+e exec nautilus
+bindsym $mod4+l exec i3lock
 set $mod Mod1
 
 
@@ -201,11 +202,19 @@ bindsym XF86AudioPrev exec playerctl previous
 # }
 assign [class = "Firefox"] 3
 assign [class = "terminal"] 1
-assign [class = "stardict"] 7
+assign [class = "Stardict"] 7
 exec_always --no-startup-id $HOME/.screenlayout/screen_layout3.sh
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
+exec_always --no-startup-id compton
 exec fcitx
 exec firefox
 exec mpd
 exec nutstore
 exec_always $HOME/.fehbg
+
+# Make the currently focused window a scratchpad
+bindsym $mod+Shift+minus move scratchpad
+
+# Show the first scratchpad window
+bindsym $mod+minus scratchpad show
+bindsym $mod+o [title=".*VIM"] focus
