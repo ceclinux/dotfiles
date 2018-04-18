@@ -200,7 +200,7 @@ bindsym XF86AudioPrev exec playerctl previous
      # status_command i3status
 
 # }
-assign [class = "Firefox"] 3
+assign [class = "Firefox"] 2
 assign [class = "terminal"] 1
 assign [class = "Stardict"] 7
 exec_always --no-startup-id $HOME/.screenlayout/screen_layout3.sh
