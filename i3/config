@@ -218,3 +218,4 @@ bindsym $mod+Shift+minus move scratchpad
 # Show the first scratchpad window
 bindsym $mod+minus scratchpad show
 bindsym $mod+o [title="vim.*"] focus
+bindsym $mod+m move workspace to output right
