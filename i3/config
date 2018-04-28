@@ -217,6 +217,9 @@ bindsym $mod+Shift+minus move scratchpad
 
 # Show the first scratchpad window
 bindsym $mod+minus scratchpad show
-bindsym $mod+o [title="vim.*"] focus
+bindsym $mod+o [title="v|vim.*"] focus
 bindsym $mod+m move workspace to output right
 bindsym --release button2 kill
+
+for_window [class= "Code"] move scratchpad
+exec_always --no-startup-id code
