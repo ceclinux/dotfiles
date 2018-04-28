@@ -203,6 +203,7 @@ bindsym XF86AudioPrev exec playerctl previous
 assign [class = "Firefox"] 2
 assign [class = "terminal"] 1
 assign [class = "Stardict"] 7
+assign [class = "pgadmin4"] 6
 exec_always --no-startup-id $HOME/.screenlayout/screen_layout3.sh
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 exec_always --no-startup-id compton
