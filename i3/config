@@ -222,8 +222,8 @@ bindsym $mod+o [title="tmux"] focus
 bindsym $mod+m move workspace to output right
 bindsym --release button2 kill
 
-for_window [class= "Code"] move scratchpad
-exec_always --no-startup-id code
+for_window [class= "Leafpad"] move scratchpad
+exec_always --no-startup-id leafpad
 
 client.focused          #4c7899 #7F00FF #ffffff #2e9ef4   #285577
 client.focused_inactive #333333 #FF3399 #ffffff #484e50   #5f676a
