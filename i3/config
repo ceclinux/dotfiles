@@ -211,6 +211,7 @@ exec fcitx
 exec firefox
 exec mpd
 exec nutstore
+exec parcellite
 exec_always $HOME/.fehbg
 
 # Make the currently focused window a scratchpad
