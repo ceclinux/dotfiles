@@ -141,3 +141,4 @@ FZF-EOF"
 alias glog='fshow'
 alias -s html=firefox
 alias -s rb=vim
+alias -s sh=vim
