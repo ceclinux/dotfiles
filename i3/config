@@ -54,7 +54,7 @@ set $mod Mod1
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec st -f 'Liberation Mono:size=12' -e tmux
+bindsym $mod+Return exec alacritty -e tmux
 
 # kill focused window
 bindsym $mod+Shift+q kill
