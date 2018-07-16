@@ -139,6 +139,7 @@ fshow() {
 FZF-EOF"
 }
 alias glog='fshow'
+alias tmux='tmux new -A -s 0'
 alias -s html=firefox
 alias -s rb=vim
 alias -s sh=vim
