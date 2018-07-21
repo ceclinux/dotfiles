@@ -140,6 +140,6 @@ FZF-EOF"
 }
 alias glog='fshow'
 alias tmux='tmux new -A -s 0'
+bindkey "\eq" push-line-or-edit
 alias -s html=firefox
-alias -s rb=vim
-alias -s sh=vim
+alias -s sh, md, rake, rb, py=vim
