@@ -143,3 +143,4 @@ alias tmux='tmux new -A -s 0'
 bindkey "\eq" push-line-or-edit
 alias -s html=firefox
 alias -s sh, md, rake, rb, py=vim
+export ERL_AFLAGS="-kernel shell_history enabled"
