@@ -98,7 +98,7 @@ interval = 25
 mount-0 = /
 mount-1 = /home/ceclinux/asgard
 
-label-mounted = %mountpoint%: %percentage_free%% of %total%
+label-mounted = %mountpoint:0:10%: %percentage_free%%ℓ%total%
 label-unmounted = %mountpoint% not mounted
 label-unmounted-foreground = ${colors.foreground-alt}
 
@@ -293,21 +293,14 @@ full-at = 98
 format-charging = <animation-charging> <label-charging>
 format-charging-underline = #ffb52a
 
-format-discharging = <ramp-capacity> <label-discharging>
+format-discharging = <label-discharging>
 format-discharging-underline = ${self.format-charging-underline}
 
 format-full-prefix = " "
 format-full-prefix-foreground = ${colors.foreground-alt}
 format-full-underline = ${self.format-charging-underline}
 
-ramp-capacity-0 = 
-ramp-capacity-1 = 
-ramp-capacity-2 = 
-ramp-capacity-foreground = ${colors.foreground-alt}
-
-animation-charging-0 = 
-animation-charging-1 = 
-animation-charging-2 = 
+animation-charging-0 = 🗲
 animation-charging-foreground = ${colors.foreground-alt}
 animation-charging-framerate = 750
 
