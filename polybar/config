@@ -150,6 +150,12 @@ ws-icon-5 = 6; 
 ws-icon-6 = 7; 
 ws-icon-default = ♟
 
+label-focused = %icon% %index%
+label-focused-foreground = #ffffff
+label-focused-background = #3f3f3f
+label-focused-underline = #fba922
+label-focused-padding = 4
+
 [module/mpd]
 type = internal/mpd
 host = 127.0.0.1
