@@ -199,19 +199,12 @@ bindsym XF86AudioPrev exec playerctl previous
 
 bindsym Print exec deepin-screenshot
 
-# Start i3bar to display a workspace bar (plus the system information i3status
-# finds out, if available)
-# bar {
-     # tray_output primary
-     # status_command i3status
-
-# }
-assign [class = "Firefox"] 2
 assign [class = "KeePass2"] 5
 assign [class = "Alacritty"] 1
 assign [class = "Stardict"] 7
-assign [class = "pgadmin4"] 6
-exec_always --no-startup-id $HOME/.screenlayout/screen_layout3.sh
+assign [class = "Firefox"] 2
+assign [title = ".*gedit.*"] 8
+exec_always --no-startup-id $HOME/.screenlayout/1/default_layout
 exec_always --no-startup-id keepass
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 exec_always --no-startup-id compton
@@ -225,16 +218,23 @@ exec_always $HOME/.fehbg
 exec_always xset r rate 250 60
 
 # Make the currently focused window a scratchpad
-bindsym $mod+Shift+minus move scratchpad
 
 # Show the first scratchpad window
-bindsym $mod+minus scratchpad show
 # bindsym $mod+o [title="tmux"] focus
 bindsym $mod+m move workspace to output right
 bindsym --release button2 kill
 
+bindsym $mod+Shift+minus move scratchpad
+
+bindsym $mod+minus scratchpad show
 for_window [class= "Leafpad"] move scratchpad
-exec_always --no-startup-id leafpad
+exec leafpad
+
+bindsym F12 [class="st-256color"] scratchpad show;move position 0px 30px;resize set 100ppt 30ppt
+for_window [class="st-256color"] move scratchpad
+bindsym $mod3+s exec st -f "Liberation Mono:size=13" -t tmux
+exec exec st -f "Liberation Mono:size=13" -t tmux
+
 exec_always --no-startup-id fusuma
 
 client.focused          #4c7899 #7F00FF #ffffff #2e9ef4   #285577
