@@ -203,8 +203,8 @@ assign [class = "KeePass2"] 5
 assign [class = "Alacritty"] 1
 assign [class = "Stardict"] 7
 assign [class = "Firefox"] 2
+assign [class = "Nautilus"] 3
 assign [title = ".*gedit.*"] 8
-exec_always --no-startup-id $HOME/.screenlayout/1/default_layout
 exec_always --no-startup-id keepass
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 exec_always --no-startup-id compton
