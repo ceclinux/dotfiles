@@ -145,3 +145,4 @@ alias -s html=firefox
 alias -s sh, md, rake, rb, py=vim
 export ERL_AFLAGS="-kernel shell_history enabled"
 alias ls='colorls --gs'
+alias cat='bat'
