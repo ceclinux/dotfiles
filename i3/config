@@ -33,7 +33,7 @@ set $mod Mod4
 set $mod4 Mod
 set $mod3 Mod3
 bindsym $mod3+e exec nautilus; workspace 3
-bindsym $mod3+l exec i3lock
+bindsym $mod3+l exec i3lock-fancy
 bindsym $mod3+m exec arandr
 
 
