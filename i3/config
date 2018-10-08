@@ -17,8 +17,10 @@ set $mod3 Mod3
 set $file_manager nautilus
 set $locker i3lock-fancy
 set $main_terminal alacritty
-set $browser firefox
+set $browser Navigator
 set $gui_editor gedit
+set $simple_editor leafpad
+set $simple_terminal st
 
 bindsym $mod3+e exec $file_manager; workspace 3
 bindsym $mod3+l exec $locker
@@ -196,7 +198,7 @@ exec_always --no-startup-id keepass
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 exec_always --no-startup-id compton
 exec fcitx
-exec firefox
+exec $browser
 exec mpd
 exec redshift
 exec nutstore
@@ -204,23 +206,18 @@ exec parcellite
 exec_always $HOME/.fehbg
 exec_always xset r rate 250 60
 
-# Make the currently focused window a scratchpad
-
-# Show the first scratchpad window
-# bindsym $mod+o [title="tmux"] focus
 bindsym $mod+m move workspace to output right
 bindsym --release button2 kill
 
 bindsym $mod+Shift+minus move scratchpad
-
-bindsym $mod+minus scratchpad show
-for_window [class= "Leafpad"] move scratchpad
-exec leafpad
+bindsym $mod+minus [instance = $simple_editor] scratchpad show
+for_window [instance = $simple_editor] move scratchpad
+exec $simple_editor
 
 bindsym F12 [class="st-256color"] scratchpad show;move position 0px 30px;resize set 100ppt 30ppt
 for_window [class="st-256color"] move scratchpad
-bindsym $mod3+s exec st -f "Liberation Mono:size=13" -e tmux
-exec exec st -f "Liberation Mono:size=13" -e tmux
+bindsym $mod3+s exec $simple_terminal -f "Liberation Mono:size=13" -e tmux focus
+exec exec $simple_terminal -f "Liberation Mono:size=13" -e tmux
 
 exec_always --no-startup-id fusuma
 
