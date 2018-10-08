@@ -32,8 +32,15 @@ font pango:Droid Sans Mono 12
 set $mod Mod4
 set $mod4 Mod
 set $mod3 Mod3
-bindsym $mod3+e exec nautilus; workspace 3
-bindsym $mod3+l exec i3lock-fancy
+
+set $file_manager nautilus
+set $locker i3lock-fancy
+set $main_terminal alacritty
+set $browser firefox
+set $gui_editor gedit
+
+bindsym $mod3+e exec $file_manager; workspace 3
+bindsym $mod3+l exec $locker
 bindsym $mod3+m exec arandr
 
 
@@ -56,7 +63,7 @@ bindsym $mod3+m exec arandr
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec alacritty -e tmux
+bindsym $mod+Return exec $main_terminal -e tmux
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -202,9 +209,9 @@ bindsym Print exec deepin-screenshot
 assign [class = "KeePass2"] 5
 assign [class = "Alacritty"] 1
 assign [class = "Stardict"] 7
-assign [class = "Firefox"] 2
-assign [class = "Nautilus"] 3
-assign [title = ".*gedit.*"] 8
+assign [instance = $browser] 2
+assign [instance = $file_manager] 3
+assign [instance = $gui_editor] 8
 exec_always --no-startup-id keepass
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 exec_always --no-startup-id compton
