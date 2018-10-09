@@ -202,15 +202,12 @@ card = intel_backlight
 type = internal/cpu
 interval = 0.5
 
-format = <label> <ramp-coreload>
+format = <ramp-coreload>
 format-background = #66cc99
 format-foreground = #2a5c45
 format-underline = #60eaa5
 format-overline = #60eaa5
 format-padding = 2
-
-label = cpu
-label-font = 3
 
 ramp-coreload-0 = ▁
 ramp-coreload-0-font = 5
