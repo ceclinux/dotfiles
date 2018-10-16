@@ -64,8 +64,8 @@ label-indicator-underline = ${colors.secondary}
 type = internal/fs
 interval = 25
 
-mount-0 = /
-mount-1 = /home/ceclinux/asgard
+mount-0 = ${env:SYSTEM_MOUNT}
+mount-1 = ${env:EXTERNAL_MOUNT}
 
 label-mounted = %mountpoint%: %percentage_free%%ℓ%total%
 label-unmounted = %mountpoint% not mounted
