@@ -205,7 +205,7 @@ exec mpd
 exec redshift
 exec nutstore
 exec parcellite
-exec_always $HOME/.fehbg
+exec_always feh --randomize --bg-fill $HOME/.wallpaper/*
 exec_always xset r rate 250 60
 
 bindsym $mod+m move workspace to output right
