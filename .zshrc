@@ -146,3 +146,6 @@ alias -s sh, md, rake, rb, py=vim
 export ERL_AFLAGS="-kernel shell_history enabled"
 alias ls='colorls --gs'
 alias cat='bat'
+
+
+alias sqlformat="curl -X POST -F 'data=<-' -F datafile='' -F output_format=sql -F ajax=1 -F n_indents=1 -F keyword_case=upper -F identifier_case=lower 'https://sqlformat.org/' 2>/dev/null | jq -r .plain"
