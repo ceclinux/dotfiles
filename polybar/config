@@ -23,7 +23,7 @@ bottom = true
 
 include-file = $HOME/.config/polybar/font_config
 
-modules-left =
+modules-left = clipboard
 modules-right = filesystem xbacklight xkeyboard wlan
 
 
@@ -241,10 +241,10 @@ type = internal/date
 interval = 5
 
 date = %Y-%m-%d%
-date-alt = " %Y-%m-%d"
+date-alt = ""
 
 time = %H:%M
-time-alt = %H:%M:%S
+time-alt = %H:%M %a
 
 format-prefix = 
 format-prefix-foreground = ${colors.foreground-alt}
@@ -340,3 +340,8 @@ click-middle = zsh "$HOME""/.config/polybar/switch_screen_layout.sh"
 format-underline = #268bd2
 format-prefix = "💻"
 format-prefix-foreground = #5b
+
+[module/clipboard]
+type = custom/script
+exec = xclip -out
+interval = 1
