@@ -11,13 +11,14 @@ eval "$(rbenv init -)"
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
+POWERLEVEL9K_MODE='awesome-fontconfig'
 ZSH_THEME="powerlevel9k/powerlevel9k"
 # next_holiday_hours(){
    # ruby "$HOME""/time.rb"
 # }
 
-# POWERLEVEL9K_CUSTOM_NEXT_HOLIDAY_HOURS="next_holiday_hours"
-# POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(context dir rbenv custom_next_holiday_hours vcs)
+# POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(context dir rbenv vcs background_jobs)
+POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(command_execution_time status root_indicator background_jobs history time public_ip)
 
 # Set list of themes to load
 # Setting this variable when ZSH_THEME="spaceship"
