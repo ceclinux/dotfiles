@@ -23,7 +23,7 @@ bottom = true
 
 include-file = $HOME/.config/polybar/font_config
 
-modules-left = clipboard
+modules-left = primary_clipboard clipboard_clipboard
 modules-right = filesystem xbacklight xkeyboard wlan
 
 
@@ -341,7 +341,14 @@ format-underline = #268bd2
 format-prefix = "💻"
 format-prefix-foreground = #5b
 
-[module/clipboard]
+[module/primary_clipboard]
 type = custom/script
 exec = xclip -out
 interval = 1
+format-underline = #FF8C00
+
+[module/clipboard_clipboard]
+type = custom/script
+exec = xclip -out -sel clipboard
+interval = 1
+format-underline =  #66CDAA
