@@ -34,8 +34,8 @@ bottom = false
 
 include-file = $HOME/.config/polybar/font_config
 
-modules-left = switch_monitor i3 xwindow
-modules-center = mpd
+modules-left = switch_monitor i3 mpd
+modules-center = xwindow
 modules-right = volume memory cpu battery temperature date
 tray-position = right
 tray-padding = 2
