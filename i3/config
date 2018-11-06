@@ -190,13 +190,13 @@ bindsym XF86AudioPrev exec playerctl previous
 
 bindsym Print exec deepin-screenshot
 
-assign [class = "KeePass2"] 5
+assign [class = "keepassxc"] 5
 assign [class = "Alacritty"] 1
 assign [class = "Stardict"] 7
 assign [instance = $browser] 2
 assign [instance = $file_manager] 3
 assign [instance = $gui_editor] 8
-exec_always --no-startup-id keepass
+exec_always --no-startup-id keepassxc
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 exec_always --no-startup-id compton
 exec fcitx
