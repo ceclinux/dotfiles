@@ -1,3 +1,10 @@
+# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
+# Initialization code that may require console input (password prompts, [y/n]
+# confirmations, etc.) must go above this block; everything else may go below.
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
+
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
@@ -5,20 +12,19 @@
 export ZSH=$HOME/.oh-my-zsh
 # Load rbenv automatically by appending
 # the following to ~/.zshrc:
-
+export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
 
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
 POWERLEVEL9K_MODE='awesome-fontconfig'
-ZSH_THEME="powerlevel9k/powerlevel9k"
+ZSH_THEME="powerlevel10k/powerlevel10k"
 # next_holiday_hours(){
    # ruby "$HOME""/time.rb"
 # }
 
 # POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(context dir rbenv vcs background_jobs)
-POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(command_execution_time status root_indicator background_jobs history time public_ip)
 
 # Set list of themes to load
 # Setting this variable when ZSH_THEME="spaceship"
@@ -70,7 +76,7 @@ POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(command_execution_time status root_indicator
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
-  git autojump rails ruby bundler vi-mode rake-fast vim sudo history upload_file fangtang_notification my_public_ip
+  git autojump rails ruby bundler vi-mode rake-fast sudo history upload_file fangtang_notification my_public_ip
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -126,8 +132,6 @@ v() {
 alias rm="trash-put"
 alias m='mina'
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
-source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 # fshow - git commit browser
 fshow() {
   git log --graph --color=always \
@@ -145,8 +149,11 @@ bindkey "\eq" push-line-or-edit
 alias -s html=firefox
 alias -s sh, md, rake, rb, py=vim
 export ERL_AFLAGS="-kernel shell_history enabled"
-alias ls='colorls --gs'
+alias ls='exa'
 alias cat='bat'
 
 
 alias sqlformat="curl -X POST -F 'data=<-' -F datafile='' -F output_format=sql -F ajax=1 -F n_indents=1 -F keyword_case=upper -F identifier_case=lower 'https://sqlformat.org/' 2>/dev/null | jq -r .plain"
+
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
