@@ -76,7 +76,7 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
-  git autojump rails ruby bundler vi-mode rake-fast sudo history upload_file fangtang_notification my_public_ip
+  git autojump rails ruby bundler vi-mode rake-fast sudo history upload_file fangtang_notification my_public_ip zsh-autosuggestions zsh-syntax-highlighting
 )
 
 source $ZSH/oh-my-zsh.sh
