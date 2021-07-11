@@ -130,7 +130,6 @@ v() {
           done | fzf-tmux -d -m -q "$*" -1) && vim ${files//\~/$HOME}
 }
 alias rm="trash-put"
-alias m='mina'
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 # fshow - git commit browser
 fshow() {
