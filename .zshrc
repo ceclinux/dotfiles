@@ -114,7 +114,6 @@ source $ZSH/oh-my-zsh.sh
 export EDITOR='vim'
 
 # OPAM configuration
-. /home/ceclinux/.opam/opam-init/init.zsh > /dev/null 2> /dev/null || true
 alias git="hub"
 alias vi="vim"
 # fh - repeat history
@@ -157,3 +156,4 @@ alias sqlformat="curl -X POST -F 'data=<-' -F datafile='' -F output_format=sql -
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+POWERLEVEL9K_DISABLE_CONFIGURATION_WIZARD=true
